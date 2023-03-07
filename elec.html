@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav id="nav1" >
+       
+        <a class="navbar-brand" href="">Zee|Mall</a>
+        <ul>
+            <li><a href="#">Best sales</a></li>
+            <li><a href="#">New products</a></li>
+       
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#"><img src="1.png" alt=""></a></li>
+            
+        </ul>
+
+    </nav>
+
+    <div id="nav-scroll" style="display: none;">
+    <div id="nav1" >
+       
+        <a class="navbar-brand" href="">Zee|Mall</a>
+        <ul>
+            <li><a href="#">Best sales</a></li>
+            <li><a href="#">New products</a></li>
+       
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#"><img src="1.png" alt=""></a></li>
+            
+        </ul>
+
+    </div>
+</div>
+
+
+    <div class="container" >
+        <nav id="nav2">
+            <a class="logo" href="#">Electronics</a>
+            <ul>
+                <li><a href="#">Clothes</a></li>
+                <li><a href="#">Mobiles</a></li>
+                <li><a href="#">Buildings</a></li>
+                <li><a href="#">Others</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="text">
+                <H2>Apple Egypt, <br>Smart phones</H2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quis aliquid.
+                    Velit quae laboriosam enim.</p>
+            </div>
+            <div class="image">
+                <img src="images/ps4.png" alt="">
+            </div>
+        </div>
+    </div>
+<div style="text-align: center;">
+    <select style="padding: 10px; background:#eee; border:none; ">
+        <option value="">-- Filter -- </option>
+        <option value="paris">Price: Low to high</option>
+        <option value="london">Price: High to low</option>
+        <option value="athens">New products</option>
+      </select>
+</div>
+
+    <div class="container1">
+        <h3 class="title"> Products</h3>
+
+    <div class="products-container">
+        
+            <div class="product" data-name="p-1">
+                <img src="images/s22.png" alt="">
+                <h3>Samsung Galaxy S22 Ultra</h3>
+                <div class="price">$ 399</div>
+            </div>
+
+            <div class="product" data-name="p-2">
+                <img src="images/s20.png" alt="">
+                <h3>Samsung Galaxy S20 Ultra</h3>
+                <div class="price">$ 399</div>
+            </div>
+
+
+        </div>
+    </div>
+    
+    <div class="products-preview">
+        <div class="preview " data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="images/s22.png" alt="">
+            <h3>Samsung Galaxy S22 Ultra</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(250)</span>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, cum?</p>
+            <div class="price">$399</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+
+            </div>
+        </div>
+
+        <div class="preview " data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="images/s20.png" alt="">
+            <h3>Samsung Galaxy S20 Ultra</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(250)</span>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, cum?</p>
+            <div class="price">$399</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let image_top=document.querySelector('.content .image img');
+        nav1=document.getElementById('nav-scroll');
+
+        window.onscroll=function(){
+            let value=window.scrollY;
+            image_top.style="margin-top:"+ -value*0.75+"px";
+            let value2=window.scrollY;
+                let val3=window.scrollY-160     ;
+
+if(value2>=060){
+    
+        nav1.style="display:flex;position:fixed;top:0;width:100%;margin-top:"+val3/2+"px; background:rgba(218, 218, 218);";
+if(value2>=160)
+{
+    nav1.style="display:flex;position:fixed;top:0;width:100%;margin-top:0px; background:rgba(218, 218, 218);";
+
+}
+    }
+else{
+    nav1.style="position:none;display:none;";
+}
+        }
+    
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1400
+        });
+      </script>
+
+
+
+</body>
+</html>
