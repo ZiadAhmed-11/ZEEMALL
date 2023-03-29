@@ -1,83 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<?php
+include "layouts/header1.php";
+include "App/Http/middlewares/navbar.php";
 
-</head>
-<body>
-
-    <nav id="nav1">
-       
-        <a class="navbar-brand" href="">Zee|Mall</a>
-        
-        <ul>
-          <li><div class="search-container">
-            <input type="text" name="search" placeholder="Search" class="search-input">
-            <a href="#" class="search-btn">
-                    <i class="fas fa-search"></i>      
-            </a>
-        </div></li>
-            <li><a href="bestsales.html">Best sales</a></li>
-            <li><a href="newproducts.html">New products</a></li>
-       
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign up</a></li>
-            <li><a href="home.html"><img src="1.png" alt=""></a></li>
-            
-        </ul>
-  
-    </nav>
-
-    <div id="nav-scroll" style="display: none;">
-    <div id="nav1" >
-       
-        <a class="navbar-brand" href="">Zee|Mall</a>
-        <ul>
-            <li><div class="search-container">
-                <input type="text" name="search" placeholder="Search" class="search-input">
-                <a href="#" class="search-btn">
-                        <i class="fas fa-search"></i>
-            <li><a href="Bestsales.html">Best sales</a></li>
-            <li><a href="newproducts.html">New products</a></li>
-       
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign up</a></li>
-            <li><a href="home.html"><img src="1.png" alt=""></a></li>
-            
-        </ul>
-
-    </div>
-</div>
-
+?>
+ 
 
     <div class="container" >
         <nav id="nav2">
-            <a class="logo" href="elec.html">Electronics</a>
-            <ul>
-                <li><a href="clothes.html">Clothes</a></li>
-                <li><a href="mob.html">Mobiles</a></li>
-                <li><a href="buildings.html">Buildings</a></li>
-                <li><a href="others.html">Others</a></li>
+            <a class="logo" href="#">Clothing</a>
+            <ul>               
+                <li><a href="#">Mobiles</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Buildings</a></li>
+                <li><a href="#">Others</a></li>
             </ul>
         </nav>
-        
         <div class="content">
             <div class="text">
                 <H2>Apple Egypt, <br>Smart phones</H2>
@@ -85,19 +23,10 @@
                     Velit quae laboriosam enim.</p>
             </div>
             <div class="image">
-                <img src="images/ps4.png" alt="">
+                <img src="images/shirt.png" alt="">
             </div>
-            
         </div>
     </div>
-    
-    <!-- <div class="subcategories">
-        <div class="subcategory">Camiras</div>
-        <div class="subcategory">Computers</div>
-        <div class="subcategory">Headphones</div>
-        <div class="subcategory">TVs</div>
-        <div class="subcategory">Accessories</div>
-    </div> -->
 <div style="text-align: center;">
     <select style="padding: 10px; background:#eee; border:none; ">
         <option value="">-- Filter -- </option>
@@ -171,7 +100,10 @@
             </div>
         </div>
     </div>
+    <?php
+        include "layouts/footer.php";
 
+    ?>
     <script>
         let image_top=document.querySelector('.content .image img');
         nav1=document.getElementById('nav-scroll');
@@ -182,15 +114,15 @@
             let value2=window.scrollY;
                 let val3=window.scrollY-160     ;
 
-                if(value2>=060){
+if(value2>=060){
     
-    nav1.style="display:flex;position:fixed;top:0;width:100%;margin-top:"+val3/2+"px;     background:rgb(238, 238, 238);";
+        nav1.style="display:flex;position:fixed;top:0;width:100%;margin-top:"+val3/2+"px;  background:rgb(238, 238, 238);";
 if(value2>=160)
 {
-nav1.style="display:flex;position:fixed;top:0;width:100%;margin-top:0px;     background:rgb(238, 238, 238);";
+    nav1.style="display:flex;position:fixed;top:0;width:100%;margin-top:0px;  background:rgb(238, 238, 238);";
 
 }
-}
+    }
 else{
     nav1.style="position:none;display:none;";
 }

@@ -1,69 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<?php
+include "layouts/header1.php";
 
-</head>
-<body>
+include "App/Http/middlewares/navbar.php";
 
-    <nav id="nav1" >
-       
-        <a class="navbar-brand" href="">Zee|Mall</a>
-        <ul>
-            <li><a href="bestsales.html">Best sales</a></li>
-            <li><a href="newproducts.html">New products</a></li>
-       
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign up</a></li>
-            <li><a href="home.html"><img src="1.png" alt=""></a></li>
-            
-        </ul>
-
-    </nav>
-
-    <div id="nav-scroll" style="display: none;">
-    <div id="nav1" >
-       
-        <a class="navbar-brand" href="">Zee|Mall</a>
-        <ul>
-            <li><a href="Bestsales.html">Best sales</a></li>
-            <li><a href="newproducts.html">New products</a></li>
-       
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign up</a></li>
-            <li><a href="home.html"><img src="1.png" alt=""></a></li>
-            
-        </ul>
-
-    </div>
-</div>
+?>
+ 
 
 
     <div class="container" >
         <nav id="nav2">
-            <a class="logo" href="elec.html">Building</a>
+            <a class="logo" href="elec.php">Building</a>
             <ul>
-                <li><a href="clothes.html">Clothes</a></li>
-                <li><a href="mob.html">Mobiles</a></li>
-                <li><a href="elec.html">Elecrronics</a></li>
-                <li><a href="others.html">Others</a></li>
+                <li><a href="clothes.php">Clothes</a></li>
+                <li><a href="mob.php">Mobiles</a></li>
+                <li><a href="elec.php">Elecronics</a></li>
+                <li><a href="others.php">Others</a></li>
             </ul>
         </nav>
         <div class="content">

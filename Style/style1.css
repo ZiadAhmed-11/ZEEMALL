@@ -69,12 +69,26 @@ body {
     width:80%;
     height: 80%;
     background: linear-gradient(220deg,#5675ff,#da3c3c);
+    animation: gradient 15s ease infinite;
     border-radius: 20px;
     overflow: hidden ;
     justify-content: center;
     align-items: center;
 margin: 20px auto;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 #nav1{
     display: flex;
     justify-content: space-between;
@@ -341,7 +355,7 @@ color: #000000;
     display: none;
     padding: 2rem;
     text-align: center;
-    background: #fff;
+    background: #eee;
     position: relative;
     margin: 2rem;
     width: 40rem;

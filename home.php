@@ -1,7 +1,12 @@
+<?php
+ob_start();
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Zee|Mall</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -214,48 +219,31 @@ width: 18px;
 
   <body>
 
-    <nav id="nav1">
-       
-      <a class="navbar-brand" href="">Zee|Mall</a>
-      
-      <ul>
-        <li><div class="search-container">
-          <input type="text" name="search" placeholder="Search" class="search-input">
-          <a href="#" class="search-btn">
-                  <i class="fas fa-search"></i>      
-          </a>
-      </div></li>
-          <li><a href="#">Best sales</a></li>
-          <li><a href="#">New products</a></li>
-     
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Sign up</a></li>
-          <li><a href="#"><img src="1.png" alt=""></a></li>
-          
-      </ul>
+    <?php
+include "App/Http/middlewares/navbar.php";
 
-  </nav>
+    ?>
 
     <div id="container2" class=" container2 mt-5 mb-5 pb-5" >
       <div class="categories-container">
         <div class="row d-flex justify-content-center mb-5 pb-1" >
           
             <div id="card" class="category" style=" width: 160px;"  data-aos="zoom-in" data-aos-duration="1000">
-              <a href="clothes.html">  <div class="card " >
+              <a href="clothes.php">  <div class="card " >
                     <img style="width:100%;" src="cloth.jpg"   alt="appointment">
                    
                 </div></a>
             </div>
 
             <div id="card" class="category" style=" width: 160px;"  data-aos="zoom-in" data-aos-duration="1500">
-                <a href="elec.html"> <div class="card " >
+                <a href="elec.php"> <div class="card " >
                     <img src="ele.jpg" alt="doctors">
                     
                 </div></a>
             </div>
 
             <div id="card" class="category" style=" width: 160px;" data-aos="zoom-in" data-aos-duration="2000">
-                <a href="mob.html"><div class="card " >
+                <a href="mob.php"><div class="card " >
                     <img src="mo.jpg" alt="doctors">
                     
                 </div></a>
