@@ -21,6 +21,8 @@ session_start();
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="magicscroll/magicscroll.css"/>
+<script src="magicscroll/magicscroll.js"></script>
 <style>
     body
     {
@@ -271,15 +273,17 @@ left: 0;
 include "App/Http/middlewares/navbar.php";
 
     ?>
- <div id="container2" class=" container2 mt-5 mb-5 pb-5" >
+    <div id="container2" class=" container2 mt-5 mb-5 pb-5" >
       <div class="categories-container">
         <div class="row d-flex justify-content-center mb-5 pb-1" >
           
+        <div class="MagicScroll" data-options="mode: carousel; height: 275px;">
+
             <div id="card" class="category" style=" width: 160px;"  data-aos="zoom-in" data-aos-duration="1000">
-              <a href="clothes.php">  <div class="card " >
+              <a href="clothes.php">  
                     <img style="width:100%;" src="cloth.jpg"   alt="appointment">
                    
-                </div></a>
+                </a>
             </div>
 
             <div id="card" class="category" style=" width: 160px;"  data-aos="zoom-in" data-aos-duration="1500">
@@ -298,7 +302,7 @@ include "App/Http/middlewares/navbar.php";
 
             <div id="card" class="category" style=" width: 160px;" data-aos="zoom-in" data-aos-duration="2500">
                 <a href=""> <div class="card " >
-                    <img src="home.jpg" alt="doctors">
+                    <img src="building.jpg" alt="doctors">
                     
                 </div></a>
             </div>
@@ -311,8 +315,10 @@ include "App/Http/middlewares/navbar.php";
             </div></div></div></div>
 
 
+            <!--     Log in  -->
             
             </div>
+</div>
             
     <!-- Optional JavaScript -->
 
@@ -327,14 +333,14 @@ include "App/Http/middlewares/navbar.php";
 
     <script>
 
-// let login=document.getElementById('login');
-// login.onclick=function()
-// {
-//   let login_card=document.getElementById('login-card');
-//   login_card.style=" display:flex;"
-//   let container2=document.getElementById('container2');
-//   container2.style.display="none";
-// }
+let login=document.getElementById('login');
+login.onclick=function()
+{
+  let login_card=document.getElementById('login-card');
+  login_card.style=" display:flex;"
+  let container2=document.getElementById('container2');
+  container2.style.display="none";
+}
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

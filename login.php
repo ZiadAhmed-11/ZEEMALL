@@ -2,17 +2,18 @@
 
 use App\Database\Models\User;
 use App\Http\Requests\Validation;
+include "App/Http/middlewares/guest.php";
 
 ob_start();
 session_start();
 
 include "App/Http/Requests/Validation.php";
-include "App/Database/Models/User.php";
 
 $validation=new Validation;
 if($_SERVER['REQUEST_METHOD']=='POST'&&!empty($_POST))
  {
-  
+  include "App/Database/Models/User.php";
+
 
 //validation
 
@@ -69,8 +70,13 @@ if(empty($validation->getErrors()))
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <style>
     body
@@ -85,6 +91,133 @@ if(empty($validation->getErrors()))
           background-attachment: fixed;
 
     }
+    
+input[type=text], select, textarea{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    border-right: 5px solid #ccc;
+    margin: 10px 0;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  #box h1{
+    font-family: 'Jost', sans-serif;
+  font-size: 50px;
+  color:#2E2E2E;
+  }
+  
+    input[type=password], select, textarea{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-right: 5px solid #ccc;
+  
+    border-radius: 40px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  
+  button[type=submit] {
+    
+    font-family: 'Jost', sans-serif;
+    background-color: #808080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  
+  .container5 input[type=text]:focus,[type=tel]:focus,[type=password]:focus{ 
+    box-shadow: 10px 10px 8px #888888;
+  }
+  /* Style the container */
+  .container5 {
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  .container5 input[type=submit]:hover{
+    background-color: #c0c0c0;
+  }
+  
+    .footer{
+background: linear-gradient(135deg,#000);
+padding:10px 0px;
+font-family: 'Play', sans-serif;
+text-align:center;
+}
+
+.footer .row1{
+width:100%;
+margin:0.5% 0%;
+padding:0.6% 0%;
+color:gray;
+font-size:1.2em;
+}
+
+
+.footer .row1 a{
+text-decoration:none;
+color:gray;
+transition:0.5s;
+}
+
+.footer .row1 a:hover{
+color:#fff;
+}
+
+.footer .row1 ul{
+width:100%;
+}
+
+.footer .row1 ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row1 a i{
+font-size:2em;
+margin:0% 1%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    #box{
+      width: 100%;
+    }
+     input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+@media (max-width:720px){
+.footer{
+text-align:center;
+padding:5%;
+}
+.footer .row1 ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+.footer .row1 a i{
+margin:0% 3%;
+}
+}
         
 .search-container{
     background: #fff;
@@ -250,22 +383,22 @@ width: 18px;
    </nav>
     
  
-             <div id="box" class=" p-5 bg-transparent" >
-              <h2 class="text-uppercase text-secondary text-center display-4 mb-5">Login</h2>
+             <div id="box" class="box" >
+              <h1 class="text-uppercase text-secondary text-center display-4 mb-5">Login</h1>
 
               <form method="post">
 
                 
                 
-                <div class="form-outline mt-4">
-                  <input type="email" id="form3Example3cg"  name="email"
+                <div class="form-outline mt-4" style="margin:auto;">
+                  <input type="text" id="form3Example3cg" style="margin:auto;"  name="email"
                     class="form-control form-control-lg" placeholder="Email" />
                     <?= $validation->getMessage('email') ?>
 
                 </div>
 
                 <div class="form-outline mt-4">
-                  <input type="password" id="form3Example4cg" placeholder="Password" name="password"
+                  <input type="password" style="margin:auto;" id="form3Example4cg" placeholder="Password" name="password"
                     class="form-control form-control-lg" />
                     <?= $validation->getMessage('password') ?>
 
@@ -297,6 +430,7 @@ width: 18px;
   </body>
 </html>
 <?php
+// include"layouts/footer.php";
         session_destroy();
         ob_end_flush();
         ?>

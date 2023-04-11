@@ -30,10 +30,14 @@
       
        <a class="navbar-brand" href="">Zee|Mall</a>
        <ul>
-           <li><div class="search-container">
-               <input type="text" name="search" placeholder="Search" class="search-input">
-               <a href="#" class="search-btn">
-                       <i class="fas fa-search"></i>
+       <li>
+            <form method="post"><div class="search-container">
+           <input type="text" name="search" placeholder="Search" class="search-input">
+           <button href="#"  class="search-btn"> </button>
+                   <i class="fas fa-search"></i>      
+           </a>
+       </div></form>
+    </li>
            <li><a href="Bestsales.php">Best sales</a></li>
            <li><a href="newproducts.php">New products</a></li>
       

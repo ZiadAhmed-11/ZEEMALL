@@ -56,6 +56,7 @@ $query1=mysqli_query($conn,$req);
    <?php
 // }
 // else{
+    $sum=0;
 while($fetch=mysqli_fetch_object($query1))
 {
 ?>
@@ -64,7 +65,7 @@ $req2="SELECT name_en , name_ar ,price  FROM products where id= ". $fetch->produ
 $query2=mysqli_query($conn,$req2);
 $fetch2=mysqli_fetch_object($query2);
 // $req3="DELETE FROM customers WHERE patient_id = ". $fetch->patient_id;
-
+$sum+=$fetch2->price*$fetch->quantity;
     ?>
   <tr>
   <td><?= $fetch2->name_en?></td>
@@ -82,7 +83,12 @@ $fetch2=mysqli_fetch_object($query2);
   <?php
 }
 // }
+
 ?>
+<td colspan="3" style="color: #A30000; font-weight:900">Total :</td>
+<td style="color: #A30000; font-weight:900">$<?=$sum ?></td>
+<td><button type="submit" style="background-color: #68BBE3;" >Buy Now </button></td>
+
      
 </table>
 

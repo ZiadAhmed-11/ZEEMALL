@@ -9,10 +9,11 @@ session_start();
 
 if($_SERVER['REQUEST_METHOD']=='POST'&&!empty($_POST))
 {
-    if(isset($_POST['search']))
+    if(isset($_POST['search'])&&!empty($_POST['search']))
     {
 header('location:search.php');
-    }
+$_SESSION['search']=$_POST['search']  ;  
+}
     else if(isset($_POST['quantity']))
     {
         if(isset($_SESSION['user'])){
@@ -74,6 +75,12 @@ header('location:search.php');
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <!--FONT AWESOME-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
 <style>
      .footer{
 background: linear-gradient(135deg,#000);
@@ -90,12 +97,20 @@ color:gray;
 font-size:1.2em;
 }
 
+.text{
+    cursor: pointer;
+}
+.container #nav2{
+    width: 90%;
+}
+
 
 .footer .row1 a{
 text-decoration:none;
 color:gray;
 transition:0.5s;
 }
+
 
 .footer .row1 a:hover{
 color:#fff;
@@ -110,16 +125,17 @@ display:inline-block;
 margin:0px 30px;
 }
 
-.footer .row1 a i{
+.footer .row1 a img{
 font-size:2em;
-margin:0% 1%;
+margin:0% 0.5%;
 }
 
 @media (max-width:720px){
 .footer{
-text-align:left;
+text-align:center;
 padding:5%;
 }
+
 .footer .row1 ul li{
 display:block;
 margin:10px 0px;
@@ -128,6 +144,13 @@ text-align:left;
 .footer .row1 a i{
 margin:0% 3%;
 }
+}
+.subcategory{
+    background: linear-gradient(220deg,#5675ff,#da3c3c);
+    width: 100px;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 50%;
 }
 
 .container{

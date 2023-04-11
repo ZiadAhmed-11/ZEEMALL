@@ -291,6 +291,15 @@ class Product extends Model implements Crud{
 
         return $this;
     }
+
+    public function getProductByName()
+{
+    $query="SELECT * FROM ". self::TABLE . " WHERE name_en LIKE %?% ";
+    $stmt=$this->conn->prepare($query);
+    // $stmt->bind_param("s",$this->email);
+    $stmt->execute();
+    return $stmt->get_result();
+}
     public function create()
     {
     #

@@ -3,14 +3,12 @@
 // session_start();
 use App\Database\Models\User;
 use App\Http\REquests\Validation;
-include "App/Http/middlewares/guest.php";
 
 include "layouts/header1.php";
 include "layouts/navbar2.php";
 
 include "App/Database/Models/User.php";
 include "App/Http/Requests/Validation.php";
-
 // $validation=new Validation;
 
 // if($_SERVER['REQUEST_METHOD']=='POST'&&!empty($_POST))
@@ -77,7 +75,7 @@ if(empty($validation->getErrors()))
 
     if($user->create())
     {
-        // $_SESSION['verification_email']=$_POST['email'];
+        $_SESSION['verification_email']=$_POST['email'];
         header("location:login.php?email=".$_POST['email']);
     }
     else

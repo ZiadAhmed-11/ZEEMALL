@@ -4,9 +4,13 @@ namespace App\Database\Models;
 
 use App\Database\Models\Contacts\crud ;
 
-include"Contacts/Crud.php";
-include"Model.php";
-
+include_once "Contacts/Crud.php";
+// include"Model.php";
+if($_SERVER['REQUEST_METHOD']=='POST'&&!empty($_POST))
+ {
+    // include"Contacts/Crud.php";
+include_once "App/Database/Models/Model.php";
+}
 class User extends Model implements Crud{
 private $id,$first_name,$last_name,$email,$password,$gender,$phone,
 $verification_code,$email_verified_at,$created_at,$updated_at;

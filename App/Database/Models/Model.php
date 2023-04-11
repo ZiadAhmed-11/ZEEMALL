@@ -5,7 +5,7 @@ use App\Database\Config\Connection;
 
 //include "App/Database/Config/Connection.php";
 //include "../../../vendor/autoload.php";
-include "App/Database/Config/Connection.php";
+include_once "App/Database/Config/connection.php";
 
 class Model extends Connection
 {
